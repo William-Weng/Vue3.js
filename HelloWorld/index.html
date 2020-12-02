@@ -1,0 +1,29 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--載入相關的CSS設定-->
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
+    <!--載入Vue3.js-->
+    <script src="https://unpkg.com/vue@3.0.3/dist/vue.global.js"></script>
+    <title>Apple iPad Air 2020</title>
+</head>
+
+<body>
+    <div id="main">
+        <div class="nav-bar"></div>        
+        <div class="cart">購物數量 - {{ cart }}</div>
+        <product-display-tag :premium-props="isPremium" @add-to-cart="updateCart"></product-display-tag>
+    </div>
+
+    <!--載入index.js-->
+    <script src="./index.js"></script>
+    <!--載入productDisplayTag.js-->
+    <script src="./components/productDisplayTag.js"></script>
+    <!--產生對應id為main的mountedApp常數-->
+    <script>const mountedApp = myApp.mount("#main")</script>
+</body>
+</html>
