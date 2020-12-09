@@ -1,0 +1,32 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--載入相關的CSS設定-->
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
+    <!--載入Vue3.js-->
+    <script src="https://unpkg.com/vue@3.0.4/dist/vue.global.js"></script>
+    <title>表單 + 雙向綁定 + 生命週期</title>
+</head>
+
+<body>
+    <div id="main">
+        <img :src="image">
+        <review-list :reviews-prop="reviews"></review-list>
+        <review-form @review-submitted="addReview"></review-form>
+    </div>
+    
+    <!--載入index.js-->
+    <script src="./index.js"></script>
+    <script src="./component/reviewForm.js"></script>
+    <script src="./component/reviewList.js"></script>
+    <script>
+    const mountedApp = myApp.mount("#main")
+    </script>
+</body>
+</html>
+
+
